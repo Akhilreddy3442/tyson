@@ -1,13 +1,61 @@
-<html>
-    <head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Event Registration</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <form class="card" action="#" method="post" novalidate>
+      <h1 class="title">Event Registration</h1>
 
-        <body>
+      <p class="subtitle">Please fill out this form to register for the event.</p>
 
+      <div class="form-grid">
+        <label for="firstName">First name<span aria-hidden="true" class="req">*</span></label>
+        <input id="firstName" name="firstName" type="text" placeholder="Jane" required />
 
-        </body>
-    </head>
-    <script>
-        
-    </script>
+        <label for="lastName">Last name<span aria-hidden="true" class="req">*</span></label>
+        <input id="lastName" name="lastName" type="text" placeholder="Doe" required />
 
+        <label for="email">Email<span aria-hidden="true" class="req">*</span></label>
+        <input id="email" name="email" type="email" placeholder="jane@example.com" required />
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="+1 (555) 555-0123" />
+
+        <label for="event">Select event<span aria-hidden="true" class="req">*</span></label>
+        <select id="event" name="event" required>
+          <option value="" disabled selected>Choose an event</option>
+          <option value="workshop">Workshop: Modern Web</option>
+          <option value="talk">Talk: Product Design</option>
+          <option value="network">Networking Session</option>
+        </select>
+
+        <label for="tickets">Number of tickets<span aria-hidden="true" class="req">*</span></label>
+        <input id="tickets" name="tickets" type="number" min="1" max="10" value="1" required />
+      </div>
+
+      <label for="date">Preferred date</label>
+      <input id="date" name="date" type="date" />
+
+      <label for="comments">Comments / Accessibility needs</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Any special requests or notes"></textarea>
+
+      <div class="checkbox-row">
+        <input id="agree" name="agree" type="checkbox" required />
+        <label for="agree">I agree to receive event updates and accept the terms<span class="req">*</span></label>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn primary">Register</button>
+        <button type="reset" class="btn">Reset</button>
+      </div>
+
+      <p class="note"><span class="req">*</span> required</p>
+    </form>
+  </main>
+</body>
 </html>
